@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Application</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            margin: 0;
+
+            padding: 20px;
+
+            background-color: #f4f6f9;
+
+        }
+
+        .container {
+
+            width: 600px;
+
+            background-color: #ffffff;
+
+            border-radius: 8px;
+
+            padding: 20px;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .header {
+
+            text-align: center;
+
+            margin-bottom: 20px;
+
+        }
+
+        .question {
+
+            margin: 10px 0;
+
+            font-weight: bold;
+
+        }
+
+        .options {
+
+            list-style: none;
+
+            padding: 0;
+
+        }
+
+        .options li {
+
+            margin: 5px 0;
+
+        }
+
+        .btn {
+
+            margin-top: 20px;
+
+            padding: 10px;
+
+            background-color: #007bff;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+        .btn:hover {
+
+            background-color: #0056b3;
+
+        }
+
+        .form-group {
+
+            margin: 10px 0;
+
+        }
+
+        .form-group input {
+
+            width: calc(100% - 20px);
+
+            padding: 10px;
+
+            margin-bottom: 10px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+<div class="container" id="create-quiz">
+
+    <div class="header"><h2>Create Quiz</h2></div>
+
+    
+
+    <div class="form-group">
+
+        <input type="text" placeholder="Enter question" required>
+
+    </div>
+
+    <div class="form-group">
+
+        <input type="text" placeholder="Option A" required>
+
+        <input type="text" placeholder="Option B" required>
+
+        <input type="text" placeholder="Option C" required>
+
+        <input type="text" placeholder="Option D" required>
+
+    </div>
+
+    <button class="btn">Add Question</button>
+
+    <button class="btn" onclick="document.getElementById('create-quiz').style.display='none'; document.getElementById('attend-quiz').style.display='block';">Start Quiz</button>
+
+</div>
+
+
+
+<div class="container" id="attend-quiz" style="display:none;">
+
+    <div class="header"><h2>Attend Quiz</h2></div>
+
+
+
+    <!-- Example Questions -->
+
+    <div class="question">1. What is Java?</div>
+
+    <ul class="options">
+
+        <li><label><input type="radio" name="q1" value="A"> Programming Language</label></li>
+
+        <li><label><input type="radio" name="q1" value="B"> Software</label></li>
+
+        <li><label><input type="radio" name="q1" value="C"> Browser</label></li>
+
+        <li><label><input type="radio" name="q1" value="D"> Hardware</label></li>
+
+    </ul>
+
+
+
+    <div class="question">2. Which company developed Java?</div>
+
+    <ul class="options">
+
+        <li><label><input type="radio" name="q2" value="A"> Microsoft</label></li>
+
+        <li><label><input type="radio" name="q2" value="B"> Oracle</label></li>
+
+        <li><label><input type="radio" name="q2" value="C"> Apple</label></li>
+
+        <li><label><input type="radio" name="q2" value="D"> Google</label></li>
+
+    </ul>
+
+
+
+    <div class="question">3. What does JVM stand for?</div>
+
+    <ul class="options">
+
+        <li><label><input type="radio" name="q3" value="A"> Java Virtual Machine</label></li>
+
+        <li><label><input type="radio" name="q3" value="B"> Java Vendor Machine</label></li>
+
+        <li><label><input type="radio" name="q3" value="C"> Java Visual Machine</label></li>
+
+        <li><label><input type="radio" name="q3" value="D"> None of the above</label></li>
+
+    </ul>
+
+
+
+    <a href="last.jsp">SUBMIT</a>
+
+</div>
+
+
+
+</body>
+
+</html>
