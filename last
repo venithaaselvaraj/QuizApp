@@ -4,21 +4,209 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
 
-<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz Completion</title>
+
+<style>
+
+    body {
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        height: 100vh;
+
+        margin: 0;
+
+        font-family: Arial, sans-serif;
+
+        background: linear-gradient(135deg, #4a90e2, #56CCF2);
+
+        color: #fff;
+
+        overflow: hidden;
+
+    }
+
+    .container {
+
+        text-align: center;
+
+        background-color: rgba(255, 255, 255, 0.1);
+
+        padding: 2em;
+
+        border-radius: 10px;
+
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+
+        width: 90%;
+
+        max-width: 500px;
+
+        animation: fadeIn 1s ease;
+
+    }
+
+    h1 {
+
+        font-size: 2.5em;
+
+        margin-bottom: 0.3em;
+
+        animation: popUp 1s ease;
+
+    }
+
+    .celebration {
+
+        font-size: 1.2em;
+
+        margin: 1em 0;
+
+    }
+
+    .results {
+
+        font-size: 1.2em;
+
+        margin: 1em 0;
+
+    }
+
+    .button {
+
+        display: inline-block;
+
+        padding: 0.8em 2.5em;
+
+        margin-top: 1.5em;
+
+        color: #4a90e2;
+
+        background-color: #fff;
+
+        text-decoration: none;
+
+        border-radius: 5px;
+
+        font-weight: bold;
+
+        transition: background 0.3s ease;
+
+        font-size: 1.1em;
+
+    }
+
+    .button:hover {
+
+        background-color: #e0e0e0;
+
+    }
+
+    .icon {
+
+        font-size: 3em;
+
+        margin-bottom: 0.5em;
+
+        animation: bounce 1s infinite;
+
+    }
+
+
+
+    /* Animations */
+
+    @keyframes fadeIn {
+
+        from { opacity: 0; transform: scale(0.9); }
+
+        to { opacity: 1; transform: scale(1); }
+
+    }
+
+    @keyframes popUp {
+
+        0% { transform: scale(0); }
+
+        100% { transform: scale(1); }
+
+    }
+
+    @keyframes bounce {
+
+        0%, 100% { transform: translateY(0); }
+
+        50% { transform: translateY(-10px); }
+
+    }
+
+</style>
 
 </head>
 
 <body>
 
-<h1>YOU HAVE SUCCESSFULLY COMPLETED THE QUIZ</h1>
+<div class="container">
+
+    <div class="icon">🎉</div>
+
+    <h1>Congratulations!</h1>
+
+    <p class="celebration">You have successfully completed the Java quiz!</p>
+
+    <div class="results">
+
+        <p>Correct Answers: <span id="correctPercentage">--</span>%</p>
+
+        <p>Wrong Answers: <span id="wrongPercentage">--</span>%</p>
+
+    </div>
+
+    <p>Thank you for participating. We hope you enjoyed the experience and learned something new.</p>
+
+    
+
+</div>
 
 
+
+<script>
+
+    // Sample JavaScript to calculate and display the correct and wrong answer percentages
+
+    const totalQuestions = 5; // Update with the actual number of questions
+
+    const correctAnswers = 3; // Replace with dynamic calculation of correct answers
+
+
+
+    // Calculate percentages
+
+    const correctPercentage = (correctAnswers / totalQuestions) * 100;
+
+    const wrongPercentage = 100 - correctPercentage;
+
+
+
+    // Update the placeholders with calculated values
+
+    document.getElementById("correctPercentage").textContent = correctPercentage.toFixed(1);
+
+    document.getElementById("wrongPercentage").textContent = wrongPercentage.toFixed(1);
+
+</script>
 
 </body>
 
